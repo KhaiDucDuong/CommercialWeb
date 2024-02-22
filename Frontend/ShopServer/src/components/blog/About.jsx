@@ -11,9 +11,7 @@ const About = (props) => {
       <h4 className="fst-italic">{props.title}</h4>
       <Line className="mb-2" />
       <p className="mb-0">
-        Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris
-        leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis,
-        eget orci purus amet pede, consectetur neque risus.
+        Tien gie dep trai
       </p>
     </div>
   );
