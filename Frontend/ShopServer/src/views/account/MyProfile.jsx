@@ -7,7 +7,9 @@ const SettingForm = lazy(() => import("../../components/account/SettingForm"));
 const CardListForm = lazy(() =>
   import("../../components/account/CardListForm")
 );
-
+const AddressListForm = lazy(() =>
+  import("../../components/account/AddressListForm")
+);
 class MyProfileView extends Component {
   state = { imagePreview: "", isDeleting: false };
 
@@ -53,6 +55,8 @@ class MyProfileView extends Component {
             <SettingForm />
             <br></br>
             <CardListForm />
+            <br></br>
+            <AddressListForm />
           </div>
         </div>
       </div>
