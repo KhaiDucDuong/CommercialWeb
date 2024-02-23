@@ -42,6 +42,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link className="dropdown-item" to="/account/shop">
+                    <i className="bi bi-shop"></i> My Shop
+                  </Link>
+                </li>
+                <li>
                   <Link className="dropdown-item" to="/star/zone">
                     <i className="bi bi-star-fill text-warning"></i> Star Zone
                   </Link>

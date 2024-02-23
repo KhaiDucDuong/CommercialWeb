@@ -17,6 +17,7 @@ const OrdersView = lazy(() => import("./views/account/Orders"));
 const WishlistView = lazy(() => import("./views/account/Wishlist"));
 const NotificationView = lazy(() => import("./views/account/Notification"));
 const MyProfileView = lazy(() => import("./views/account/MyProfile"));
+const MyShopView = lazy(() => import("./views/shop/MyShop"));
 const ProductListView = lazy(() => import("./views/product/List"));
 const ProductDetailView = lazy(() => import("./views/product/Detail"));
 const StarZoneView = lazy(() => import("./views/product/StarZone"));
@@ -52,6 +53,7 @@ function App() {
               element={<ForgotPasswordView/>}
             />
             <Route exact path="/account/profile" element={<MyProfileView/>} />
+            <Route exact path="/account/shop" element={<MyShopView/>} />
             <Route exact path="/account/orders" element={<OrdersView/>} />
             <Route exact path="/account/wishlist" element={<WishlistView/>} />
             <Route
