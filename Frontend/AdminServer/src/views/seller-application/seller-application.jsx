@@ -41,15 +41,18 @@ import {
 } from '@coreui/icons'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import { DocsExample } from 'src/components'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './seller-application.css'
 import SellerApplicationDetails from './seller application details/seller-application-details'
 
 const SellerApplication = () => {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+  const navigate = useNavigate()
 
   function viewApplicationDetails(application) {
-    ;<Link to={`/seller-application/${application}`}>{SellerApplicationDetails(application)}</Link>
+    navigate(`/seller-application/${application.id}`, {
+      state: { id: application.id, name: application.name },
+    })
   }
 
   return (
@@ -152,7 +155,12 @@ const SellerApplication = () => {
               <CTableDataCell>0999888777</CTableDataCell>
               <CTableDataCell>Pending</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3" onClick={viewApplicationDetails('hello')}>
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: '174b8j6', name: 'Adidas' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -167,7 +175,12 @@ const SellerApplication = () => {
               <CTableDataCell>0111133332</CTableDataCell>
               <CTableDataCell>Accepted</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: '8d9bwx', name: 'Quan ao Trang' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -182,7 +195,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -197,7 +215,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Deleted</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -212,7 +235,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -227,7 +255,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -242,7 +275,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -272,7 +310,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
@@ -287,7 +330,12 @@ const SellerApplication = () => {
               <CTableDataCell>000099998888</CTableDataCell>
               <CTableDataCell>Rejected</CTableDataCell>
               <CTableDataCell>
-                <CButton type="submit" className="mb-3">
+                <CButton
+                  className="mb-3"
+                  onClick={() => {
+                    viewApplicationDetails({ id: 'dummy id', name: 'Dummy shop' })
+                  }}
+                >
                   Details
                 </CButton>
               </CTableDataCell>
