@@ -51,9 +51,12 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const Vouchers = React.lazy(() => import('./views/voucher/vouchers/Vouchers'))
-
 const CreateVoucher = React.lazy(() => import('./views/voucher/create-voucher/createVoucher'))
 
+const SellerApplication = React.lazy(() => import('./views/seller-application/seller-application'))
+const SellerApplicationDetails = React.lazy(() =>
+  import('./views/seller-application/seller application details/seller-application-details'),
+)
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -101,6 +104,12 @@ const routes = [
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/vouchers', name: 'Voucher', element: Vouchers },
   { path: '/vouchers/create-voucher', name: 'Create Voucher', element: CreateVoucher },
+  { path: '/seller-application', name: 'Seller Applications', element: SellerApplication },
+  {
+    path: '/seller-application/:id',
+    name: 'Seller Application Details',
+    element: SellerApplicationDetails,
+  },
 ]
 
 export default routes

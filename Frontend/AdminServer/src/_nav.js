@@ -271,6 +271,12 @@ const _nav = [
     icon: <CIcon icon={cilTag} customClassName="nav-icon" />,
   },
   {
+    component: CNavItem,
+    name: 'Seller Application',
+    to: '/seller-application',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+  },
+  {
     component: CNavTitle,
     name: 'Extras',
   },
