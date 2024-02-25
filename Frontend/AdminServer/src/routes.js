@@ -113,7 +113,7 @@ const routes = [
     name: 'Seller Application Details',
     element: SellerApplicationDetails,
   },
-  { path: '/categories', name: 'Categories', element: SellerApplication },
+  { path: '/categories', name: 'Categories', element: Categories },
 ]
 
 export default routes
