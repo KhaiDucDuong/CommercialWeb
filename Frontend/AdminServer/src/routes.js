@@ -57,6 +57,9 @@ const SellerApplication = React.lazy(() => import('./views/seller-application/se
 const SellerApplicationDetails = React.lazy(() =>
   import('./views/seller-application/seller application details/seller-application-details'),
 )
+
+const Categories = React.lazy(() => import('./views/category/categories/categories'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -110,6 +113,7 @@ const routes = [
     name: 'Seller Application Details',
     element: SellerApplicationDetails,
   },
+  { path: '/categories', name: 'Categories', element: SellerApplication },
 ]
 
 export default routes
