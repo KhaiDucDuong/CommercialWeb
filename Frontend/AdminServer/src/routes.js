@@ -59,8 +59,13 @@ const SellerApplication = React.lazy(() => import('./views/seller-application/se
 const SellerApplicationDetails = React.lazy(() =>
   import('./views/seller-application/seller application details/seller-application-details'),
 )
+
+const Categories = React.lazy(() => import('./views/category/categories/categories'))
+const CreateCategory = React.lazy(() => import('./views/category/create-category/create-category'))
+
 const Report = React.lazy(() => import('./views/report/report'))
 const ReportDetail = React.lazy(() => import('./views/report/report-detail/report-details'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -120,6 +125,8 @@ const routes = [
     name: 'Seller Application Details',
     element: SellerApplicationDetails,
   },
+  { path: '/categories', name: 'Categories', element: Categories },
+  { path: '/categories/create-category', name: 'Create Category', element: CreateCategory },
   { path: '/report', name: 'Report', element: Report },
   {
     path: '/report/:id',
