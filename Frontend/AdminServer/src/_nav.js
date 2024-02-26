@@ -267,6 +267,12 @@ const _nav = [
   },
   {
     component: CNavItem,
+    name: 'Users',
+    to: '/user',
+    icon: <CIcon icon={cilTag} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
     name: 'Vouchers',
     to: '/vouchers',
     icon: <CIcon icon={cilTag} customClassName="nav-icon" />,
@@ -282,6 +288,12 @@ const _nav = [
     name: 'Categories',
     to: '/categories',
     icon: <CIcon icon={cilBasket} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Reports',
+    to: '/report',
+    icon: <CIcon icon={cilTag} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,

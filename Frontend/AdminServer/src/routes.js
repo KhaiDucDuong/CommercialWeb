@@ -50,6 +50,8 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
+const User = React.lazy(() => import('./views/user/user'))
+const UserDetail = React.lazy(() => import('./views/user/user-detail/user-detail'))
 const Vouchers = React.lazy(() => import('./views/voucher/vouchers/Vouchers'))
 const CreateVoucher = React.lazy(() => import('./views/voucher/create-voucher/createVoucher'))
 
@@ -60,6 +62,9 @@ const SellerApplicationDetails = React.lazy(() =>
 
 const Categories = React.lazy(() => import('./views/category/categories/categories'))
 const CreateCategory = React.lazy(() => import('./views/category/create-category/create-category'))
+
+const Report = React.lazy(() => import('./views/report/report'))
+const ReportDetail = React.lazy(() => import('./views/report/report-detail/report-details'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -106,6 +111,12 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+  { path: '/user', name: 'User', element: User },
+  {
+    path: '/user/:id',
+    name: 'User Detail',
+    element: UserDetail,
+  },
   { path: '/vouchers', name: 'Voucher', element: Vouchers },
   { path: '/vouchers/create-voucher', name: 'Create Voucher', element: CreateVoucher },
   { path: '/seller-application', name: 'Seller Applications', element: SellerApplication },
@@ -116,6 +127,12 @@ const routes = [
   },
   { path: '/categories', name: 'Categories', element: Categories },
   { path: '/categories/create-category', name: 'Create Category', element: CreateCategory },
+  { path: '/report', name: 'Report', element: Report },
+  {
+    path: '/report/:id',
+    name: 'Report Detail',
+    element: ReportDetail,
+  },
 ]
 
 export default routes
