@@ -59,6 +59,8 @@ const SellerApplication = React.lazy(() => import('./views/seller-application/se
 const SellerApplicationDetails = React.lazy(() =>
   import('./views/seller-application/seller application details/seller-application-details'),
 )
+const Report = React.lazy(() => import('./views/report/report'))
+const ReportDetail = React.lazy(() => import('./views/report/report-detail/report-details'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -117,6 +119,12 @@ const routes = [
     path: '/seller-application/:id',
     name: 'Seller Application Details',
     element: SellerApplicationDetails,
+  },
+  { path: '/report', name: 'Report', element: Report },
+  {
+    path: '/report/:id',
+    name: 'Report Detail',
+    element: ReportDetail,
   },
 ]
 

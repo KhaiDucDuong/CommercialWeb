@@ -41,11 +41,11 @@ import {
 } from '@coreui/icons'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import { Link, useLocation } from 'react-router-dom'
-import '../user.css'
+import '../report.css'
 
 // Hien thi thong tin cua don xin lam seller + thong tin cua user day
 // Component cha sẽ truyền vào id của seller application , dựa vào id ấy gọi API lấy thông tin seller application và user
-const UserDetails = () => {
+const ReportDetails = () => {
   const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
   const location = useLocation()
 
@@ -54,59 +54,37 @@ const UserDetails = () => {
       <CCardHeader>
         <CRow className="d-flex flex-row align-items-center">
           <CCol xs={6} sm={6} lg={6} className="justify-content-center">
-            <h3 className="mb-0">User Details {location.state.id}</h3>
+            <h3 className="mb-0">Report ID {location.state.id}</h3>
           </CCol>
         </CRow>
       </CCardHeader>
       <CCardBody>
-        <h4>User Information</h4>
+        <h4>Report Detail</h4>
         <CRow className="mb-5">
           <CCol xs={12} sm={6} lg={6}>
             <CInputGroup className="mb-3">
-              <CInputGroupText id="UserId">User Id</CInputGroupText>
-              <CFormInput aria-label="UserId" disabled value={location.state.id}></CFormInput>
+              <CInputGroupText id="ReportId">Report Id</CInputGroupText>
+              <CFormInput aria-label="ReportId" disabled value={location.state.id}></CFormInput>
             </CInputGroup>
           </CCol>
 
           <CCol xs={12} sm={6} lg={6}>
             <CInputGroup className="mb-3">
-              <CInputGroupText id="UserName">User name</CInputGroupText>
-              <CFormInput aria-label="UserName" disabled value={location.state.name}></CFormInput>
+              <CInputGroupText id="Content">Content</CInputGroupText>
+              <CFormInput aria-label="Content" disabled value="Hông có ý kiến gì cả"></CFormInput>
+            </CInputGroup>
+          </CCol>
+          <CCol xs={12} sm={6} lg={6}>
+            <CInputGroup className="mb-3">
+              <CInputGroupText id="Image">Image</CInputGroupText>
+              <CFormInput aria-label="Image" disabled value="add picture"></CFormInput>
             </CInputGroup>
           </CCol>
 
           <CCol xs={12} sm={6} lg={6}>
             <CInputGroup className="mb-3">
-              <CInputGroupText id="UserAddress">Address</CInputGroupText>
-              <CFormInput aria-label="Address" disabled value="Hồ Chí Minh"></CFormInput>
-            </CInputGroup>
-          </CCol>
-
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="UserEmail">Email</CInputGroupText>
-              <CFormInput aria-label="UserEmail" disabled value="123@gmail.com"></CFormInput>
-            </CInputGroup>
-          </CCol>
-
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="UserPhone">Phone Number</CInputGroupText>
-              <CFormInput aria-label="UserPhone" disabled value="1234567890"></CFormInput>
-            </CInputGroup>
-          </CCol>
-
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="UserDoB">Date of Birth</CInputGroupText>
-              <CFormInput aria-label="UserDoB" disabled value="25/12/2003"></CFormInput>
-            </CInputGroup>
-          </CCol>
-
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="UserRole">Role</CInputGroupText>
-              <CFormInput aria-label="UserRole" disabled value="User"></CFormInput>
+              <CInputGroupText id="Owner">Owner</CInputGroupText>
+              <CFormInput aria-label="Owner" disabled value={location.state.name}></CFormInput>
             </CInputGroup>
           </CCol>
 
@@ -124,30 +102,9 @@ const UserDetails = () => {
             </CInputGroup>
           </CCol>
 
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="Status">Status</CInputGroupText>
-              <CFormInput aria-label="Status" disabled value="Pending"></CFormInput>
-            </CInputGroup>
-          </CCol>
-        </CRow>
-
-        <CRow className="mb-5">
-          <CCol xs={12} sm={6} lg={6}>
-            <CInputGroup className="mb-3">
-              <CInputGroupText id="ApplicationApprovalStatusInput">Approval Status</CInputGroupText>
-              <CFormSelect aria-label="ApplicationApprovalStatusInput">
-                <option value="1">Accepted</option>
-                <option value="2" selected>
-                  Denied
-                </option>
-              </CFormSelect>
-            </CInputGroup>
-          </CCol>
-
           <CCol xs={12} sm={3} lg={2} className="text-end">
             <CButton type="submit" className="mb-3">
-              Update Status
+              Go to the shop
             </CButton>
           </CCol>
         </CRow>
@@ -157,4 +114,4 @@ const UserDetails = () => {
   )
 }
 
-export default UserDetails
+export default ReportDetails
