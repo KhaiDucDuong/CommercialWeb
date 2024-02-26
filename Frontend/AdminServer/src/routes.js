@@ -50,6 +50,8 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
+const User = React.lazy(() => import('./views/user/user'))
+const UserDetail = React.lazy(() => import('./views/user/user-detail/user-detail'))
 const Vouchers = React.lazy(() => import('./views/voucher/vouchers/Vouchers'))
 const CreateVoucher = React.lazy(() => import('./views/voucher/create-voucher/createVoucher'))
 
@@ -102,6 +104,12 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+  { path: '/user', name: 'User', element: User },
+  {
+    path: '/user/:id',
+    name: 'User Detail',
+    element: UserDetail,
+  },
   { path: '/vouchers', name: 'Voucher', element: Vouchers },
   { path: '/vouchers/create-voucher', name: 'Create Voucher', element: CreateVoucher },
   { path: '/seller-application', name: 'Seller Applications', element: SellerApplication },
