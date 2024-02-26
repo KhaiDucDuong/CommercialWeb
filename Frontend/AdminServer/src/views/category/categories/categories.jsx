@@ -75,7 +75,7 @@ const Categories = () => {
           </CCol>
           <CCol xs={6} sm={6} lg={6} className="text-end">
             <CButton color="info">
-              <Link to="/categories" style={{ textDecoration: 'none' }}>
+              <Link to="/categories/create-category" style={{ textDecoration: 'none' }}>
                 <h4 className="mb-0" style={{ color: 'white' }}>
                   Add a new category
                 </h4>
@@ -100,6 +100,19 @@ const Categories = () => {
             />
           </CCol>
         </CRow>
+
+        <CRow className="mb-3">
+          <CFormLabel htmlFor="CategoryStatusInput" className="col-sm-2 col-form-label">
+            Status
+          </CFormLabel>
+          <CCol sm={10}>
+            <CFormSelect aria-label="CategoryStatusInput">
+              <option value="0">Active</option>
+              <option value="1">Deleted</option>
+            </CFormSelect>
+          </CCol>
+        </CRow>
+
         <CRow>
           <CCol xs={12} sm={12} lg={12} className="text-end">
             <CButton type="submit" className="mb-3">
@@ -113,32 +126,47 @@ const Categories = () => {
             <CTableRow>
               <CTableHeaderCell scope="col">#</CTableHeaderCell>
               <CTableHeaderCell scope="col">Name</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Value</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Description</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Applied Products</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Applied Shops</CTableHeaderCell>
               <CTableHeaderCell scope="col">Created At</CTableHeaderCell>
-              <CTableHeaderCell scope="col">Expired At</CTableHeaderCell>
+              <CTableHeaderCell scope="col">Updated At</CTableHeaderCell>
               <CTableHeaderCell scope="col">Status</CTableHeaderCell>
-              <CTableHeaderCell scope="col">No. Handouts</CTableHeaderCell>
-              <CTableHeaderCell scope="col">No. Available</CTableHeaderCell>
+              <CTableHeaderCell scope="col">Total No Products</CTableHeaderCell>
             </CTableRow>
           </CTableHead>
           <CTableBody>
             <CTableRow>
               <CTableHeaderCell scope="row">1</CTableHeaderCell>
-              <CTableDataCell>BF E 24</CTableDataCell>
-              <CTableDataCell>50000</CTableDataCell>
-              <CTableDataCell>
-                Voucher for electronics products, valid during 2023 blackfriday week.
-              </CTableDataCell>
-              <CTableDataCell>Electronics</CTableDataCell>
-              <CTableDataCell>All</CTableDataCell>
-              <CTableDataCell>16/11/2023</CTableDataCell>
-              <CTableDataCell>23/11/2023</CTableDataCell>
-              <CTableDataCell>Expired</CTableDataCell>
-              <CTableDataCell>2000</CTableDataCell>
-              <CTableDataCell>0</CTableDataCell>
+              <CTableDataCell>Phone</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>Active</CTableDataCell>
+              <CTableDataCell>21</CTableDataCell>
+            </CTableRow>
+
+            <CTableRow>
+              <CTableHeaderCell scope="row">2</CTableHeaderCell>
+              <CTableDataCell>Laptop</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>Active</CTableDataCell>
+              <CTableDataCell>7</CTableDataCell>
+            </CTableRow>
+
+            <CTableRow>
+              <CTableHeaderCell scope="row">3</CTableHeaderCell>
+              <CTableDataCell>Book</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>Active</CTableDataCell>
+              <CTableDataCell>102</CTableDataCell>
+            </CTableRow>
+
+            <CTableRow>
+              <CTableHeaderCell scope="row">4</CTableHeaderCell>
+              <CTableDataCell>Car</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>21/01/2024</CTableDataCell>
+              <CTableDataCell>Deleted</CTableDataCell>
+              <CTableDataCell>3</CTableDataCell>
             </CTableRow>
           </CTableBody>
         </CTable>
